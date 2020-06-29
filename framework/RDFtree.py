@@ -63,7 +63,7 @@ class RDFtree:
 
         for i, m in enumerate(self.modules[lenght:]): 
 
-            branchRDF = m.run(CastToRNode(branchRDF))
+            branchRDF = m.run(ROOT.RDF.AsRNode(branchRDF))
 
                 
             tmp_th1 = m.getTH1()
