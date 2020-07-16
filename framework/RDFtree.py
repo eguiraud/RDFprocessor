@@ -159,10 +159,10 @@ class RDFtree:
             self.fout.cd(branchDir)
             for obj in objs:
 
-                if not 'TH' in obj.__cppname__:
+                if not 'TH' in type(obj).__cpp_name__:
                     obj.GetValue()
 
-                elif 'vector' in obj.__cppname__:
+                elif 'vector' in type(obj).__cpp_name__:
                     
                     print "writing group of histos "
                     
