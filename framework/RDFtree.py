@@ -36,12 +36,13 @@ class RDFtree:
         if not os.path.exists(self.outputDir):
             os.system("mkdir -p " + self.outputDir)
    
+        prevdir = os.getcwd()
         os.chdir(self.outputDir)
 
         self.fout = ROOT.TFile(self.outputFile, "recreate")
         self.fout.Close()
 
-        os.chdir("..")
+        os.chdir(prevdir)
         
     def branch(self,nodeToStart, nodeToEnd, modules=[]):
 
